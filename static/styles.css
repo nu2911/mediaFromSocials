@@ -128,6 +128,16 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* Add space between the two buttons horizontally */
+button[type="submit"] {
+    margin-right: 10px; /* Adds space between the buttons */
+}
+
+button[type="submit"]:last-child {
+    margin-right: 0; /* Remove margin on the last button */
 }
 
 button:hover {
@@ -167,17 +177,6 @@ button:hover {
     background: var(--button-hover-bg);
     transform: scale(1.1);
 }
-
-/* Footer */
-footer {
-    background-color: var(--secondary);
-    color: var(--text);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    margin-top: 30px;
-    box-shadow: 0 -4px 6px var(--shadow);
-}
 .msg {
     background-color: var(--secondary); /* Background color */
     color: var(--text); /* Text color */
@@ -188,3 +187,14 @@ footer {
     margin-top: 20px;
     box-shadow: 0 4px 10px var(--shadow); /* Optional shadow */
 }
+/* Footer */
+footer {
+    background-color: var(--secondary);
+    color: var(--text);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    box-shadow: 0 -4px 6px var(--shadow);
+}
+

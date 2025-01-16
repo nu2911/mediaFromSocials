@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediaFromSocials</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-   
 </head>
 
 <body>
@@ -21,13 +20,13 @@
 
         <!-- Form to input URL and action -->
         <form method="POST" id="download-form" onsubmit="showSpinner()">
-            <div class="mb-3">
-                <label for="url" class="form-label">Enter Video URL:</label>
-                <input type="text" name="url" id="url" class="form-control" required>
+            <div>
+                <label for="url">Enter Video URL:</label>
+                <input type="text" name="url" id="url" required>
             </div>
-            <div class="mb-3">
-                <button type="submit" name="action" value="video" class="btn btn-primary">Download Video</button>
-                <button type="submit" name="action" value="audio" class="btn btn-secondary">Download Audio</button>
+            <div>
+                <button type="submit" name="action" value="video">Download Video</button>
+                <button type="submit" name="action" value="audio">Download Audio</button>
             </div>
         </form>
 
@@ -49,7 +48,7 @@
         <!-- Display the download link -->
         {% if file_url %}
             <div class="result-message">
-                <a href="{{ file_url }}" class="btn btn-success">Start Downloading</a>
+                <a href="{{ file_url }}">Start Downloading</a>
             </div>
         {% endif %}
     </div>
