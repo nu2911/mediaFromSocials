@@ -1,0 +1,39 @@
+:root {
+    --text: #eeedf2;
+    --background: #07030b;
+    --primary: #b58fda;
+    /* --primary: #2c1642; */
+    --secondary: #521b89;
+    /* --secondary: #4c1584; */
+    --accent: #8641ee;
+  }
+  
+  /* 
+body {
+background-color: var(--background);
+color: var(--text);
+font-family: Arial, sans-serif;
+}
+
+header {
+background-color: var(--primary);
+color: var(--text);
+padding: 10px;
+}
+
+footer {
+background-color: var(--secondary);
+color: var(--text);
+text-align: center;
+padding: 20px;
+}
+
+a {
+color: var(--accent);
+text-decoration: none;
+}
+
+a:hover {
+color: var(--primary);
+}
+ 

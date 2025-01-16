@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video/Audio Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+   
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <h1>Download Video or Audio</h1>
+
+        <!-- Form to input URL and action -->
+        <form method="POST" id="download-form" onsubmit="showSpinner()">
+            <div class="mb-3">
+                <label for="url" class="form-label">Enter Video URL:</label>
+                <input type="text" name="url" id="url" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <button type="submit" name="action" value="video" class="btn btn-primary">Download Video</button>
+                <button type="submit" name="action" value="audio" class="btn btn-secondary">Download Audio</button>
+            </div>
+        </form>
+
+        <!-- Spinner -->
+        <div id="spinner-container" class="spinner-container">
+            <video loop preload="auto" muted autoplay>
+                <source src="{{ url_for('static', filename='chips.webm') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Display the message -->
+        {% if message %}
+            <div class="msg">
+                {{ message }}
+            </div>
+        {% endif %}
+        
+        <!-- Display the download link -->
+        {% if file_url %}
+            <div class="result-message">
+                <a href="{{ file_url }}" class="btn btn-success">Start Downloading</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Function to show spinner while waiting for response
+        function showSpinner() {
+            document.getElementById('spinner-container').style.display = 'block';
+        }
+
+        // Function to hide spinner when done
+        function hideSpinner() {
+            document.getElementById('spinner-container').style.display = 'none';
+        }
+
+        // Hide the spinner on page load if no processing is needed
+        window.onload = function() {
+            hideSpinner();
+        }
+    </script>
+</body>
+</html>
