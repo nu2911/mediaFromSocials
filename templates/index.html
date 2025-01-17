@@ -10,23 +10,23 @@
 <body>
     <nav>
         <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
     </nav>
 
     <div class="page">
-        <h1>MediaFromSocials</h1>
+        <h1 class="title prism">MediaFromSocials</h1>
 
         <!-- Form to input URL and action -->
         <form method="POST" id="download-form" onsubmit="showSpinner()">
             <div>
-                <label for="url">Enter Video URL:</label>
+                <label for="url" class="rob">Enter Video URL:</label>
                 <input type="text" name="url" id="url" required>
             </div>
             <div>
-                <button type="submit" name="action" value="video">Download Video</button>
-                <button type="submit" name="action" value="audio">Download Audio</button>
+                <button type="submit" name="action" value="video" class="rob">Download Video</button>
+                <button type="submit" name="action" value="audio" class="rob">Download Audio</button>
             </div>
         </form>
 
@@ -39,14 +39,14 @@
 
         <!-- Display the message -->
         {% if message %}
-            <div class="msg">
+            <div class="msg mon">
                 {{ message }}
             </div>
         {% endif %}
         
         <!-- Display the download link -->
         {% if file_url %}
-            <div class="result-message">
+            <div class="result-message rob">
                 <a href="{{ file_url }}">Start Downloading</a>
             </div>
         {% endif %}

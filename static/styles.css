@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    
 }
 
 :root {
     --text: #eeedf2;
     --background: #07030b;
+    --background: #0e0616;
     --primary: #b58fda;
     --secondary: #521b89;
     --accent: #8641ee;
@@ -17,6 +24,26 @@
     --shadow: rgba(0, 0, 0, 0.6);
 }
 
+.rob{
+    font-family: "Roboto Flex", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ .prism{ 
+    font-family: "Tilt Prism", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  } 
+.mon{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+  
 body {
     background-color: var(--background);
     color: var(--text);
@@ -38,8 +65,7 @@ header {
     box-shadow: 0 4px 8px var(--shadow);
 }
 
-/* Navigation Bar */
-nav {
+/* nav {
     position: fixed;
     width: 100%;
     background-color: var(--secondary);
@@ -68,17 +94,85 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--accent);
     transform: scale(1.1);
+} */
+ /* Navbar Styling */
+
+ 
+/* Navbar Styling */
+nav {
+    position: fixed;
+    width: 100%;
+    /* background-color: var(--primary);  */
+    background-color: #440875; 
+    background-color: #1e1325; 
+    padding: 13px 0;
+    box-shadow: 0 0 5px #542996; 
+    top: 0;
+    z-index: 10;
 }
 
-/* Main Content */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    padding: 5px 15px; 
+    border-radius: 8px; 
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+    background-color: rgba(134, 65, 238, 0.2); 
+    transform: scale(1.05); 
+}
+
+nav ul li a.active {
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+}
+.title{
+    text-align: center;
+
+}
+.h{
+    padding: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
 .page {
+    margin-top: 50px;
     background: var(--card-bg);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 8px 20px var(--shadow);
+    /* box-shadow: 0 8px 20px var(--shadow); */
     width: 90%;
     max-width: 600px;
     text-align: center;
+    box-shadow: 0px 0px 10px #451986; 
+
+}
+.apage {
+    margin-top: 50px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    /* box-shadow: 0 8px 20px var(--shadow); */
+    width: 90%;
+    text-align: justify;
+    /* box-shadow: 0px 0px 15px #451986;  */
+
 }
 
 h1 {
@@ -86,13 +180,15 @@ h1 {
     color: var(--primary);
     margin-bottom: 20px;
 }
-
-/* Form Styling */
+.title{
+    font-size: 3rem;
+}
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 20px;
+
 }
 
 label {
@@ -130,6 +226,8 @@ button {
     transition: background 0.3s ease, transform 0.3s ease;
     margin-left: 5px;
     margin-right: 5px;
+    box-shadow: 0px 0px 8px #451986; 
+
 }
 
 button[type="submit"] {
@@ -145,7 +243,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Spinner Container */
 .spinner-container {
     display: none;
     text-align: center;
@@ -157,7 +254,6 @@ button:hover {
     height: 80px;
 }
 
-/* Results Section */
 .result-message {
     text-align: center;
     margin-top: 20px;
@@ -182,7 +278,6 @@ button:hover {
     color: var(--text); 
     padding: 15px;
     border-radius: 10px;
-    font-size: 1.2rem;
     text-align: center;
     margin-top: 20px;
     box-shadow: 0 4px 10px var(--shadow);
