@@ -38,6 +38,12 @@ def downloadAudioOnly(url):
     except Exception as e:
         return str(e)
 
+def sanitizeUrl(url):
+    if 'music.youtube.com' in url:
+        url = url.replace('music.youtube.com', 'www.youtube.com')
+    return url
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     message = ''
@@ -53,6 +59,9 @@ def index():
             message = "Error: URL is required!"
         else:
             try:
+
+                url = sanitizeUrl(url)
+
                 if action == "video":
                     filename = downloadVideo(url)
                 elif action == "audio":
