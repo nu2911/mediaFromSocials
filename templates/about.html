@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - MediaFromSocials</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}" class="active">About</a></li>
-        </ul>
-    </nav>
-
+{% extends "base.html" %}
+{% block title %}About | {% endblock %}
+{% block abouta %}class="active"{% endblock %}
+{% block content %}
     <div class="apage">
         <h1 class="title prism">About Us</h1>
         
@@ -24,7 +12,7 @@
         
         <h2 class="mon h">How It Works</h2>
         <section class="rob">
-            <p>MediaFromSocials is a Flask-based web application that leverages <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> for handling downloads and provides a simple, intuitive interface.</p>
+            <p>MediaFromSocials is a Flask-based web application that leverages <a href="https://github.com/yt-dlp/yt-dlp" class="yt-dlplink">yt-dlp</a> for handling downloads and provides a simple, intuitive interface.</p>
             <ol>
                 <li>Copy the link of the video you want to download.</li>
                 <li>Paste it into the input field on our website.</li>
@@ -45,8 +33,7 @@
         
         <h2 class="mon h">Get in Touch</h2>
         <section class="rob">
-            <p>Have questions, feedback, or suggestions? We’d love to hear from you! Reach out to us at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+            <p>Have questions, feedback, or suggestions? We’d love to hear from you! Reach out to us at <a href="mailto:your-email@example.com">✉ 2024f-bse-297@ssuet.edu.pk</a>.</p>
         </section>
     </div>
-</body>
-</html>
+    {% endblock %}
