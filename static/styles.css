@@ -28,7 +28,6 @@ body {
     align-items: center;
 }
 
-/* Header Section */
 header {
     width: 100%;
     background-color: var(--primary);
@@ -113,9 +112,10 @@ input {
     transition: border-color 0.3s ease;
 }
 
-input:focus {
+input:focus, input:hover {
     outline: none;
-    border-color: var(--accent);
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 5px var(--accent);
 }
 
 button {
@@ -131,13 +131,13 @@ button {
     margin-left: 5px;
     margin-right: 5px;
 }
-/* Add space between the two buttons horizontally */
+
 button[type="submit"] {
-    margin-right: 10px; /* Adds space between the buttons */
+    margin-right: 10px; 
 }
 
 button[type="submit"]:last-child {
-    margin-right: 0; /* Remove margin on the last button */
+    margin-right: 0; 
 }
 
 button:hover {
@@ -153,7 +153,7 @@ button:hover {
 }
 
 .spinner-container video {
-    width: 80px;  /* Adjust size of spinner */
+    width: 80px; 
     height: 80px;
 }
 
@@ -178,16 +178,16 @@ button:hover {
     transform: scale(1.1);
 }
 .msg {
-    background-color: var(--secondary); /* Background color */
-    color: var(--text); /* Text color */
+    background-color: var(--secondary); 
+    color: var(--text); 
     padding: 15px;
     border-radius: 10px;
     font-size: 1.2rem;
     text-align: center;
     margin-top: 20px;
-    box-shadow: 0 4px 10px var(--shadow); /* Optional shadow */
+    box-shadow: 0 4px 10px var(--shadow);
 }
-/* Footer */
+
 footer {
     background-color: var(--secondary);
     color: var(--text);

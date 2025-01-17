@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - MediaFromSocials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <h1>About MediaFromSocials</h1>
+
+        <p>Welcome to MediaFromSocials, a simple web app that allows you to download videos and audio from various social media platforms. The app is designed to be easy to use, providing a seamless way to grab media content from the web for offline use.</p>
+        
+        <h2>Features:</h2>
+        <ul>
+            <li>Download videos in high quality.</li>
+            <li>Extract audio in MP3 format.</li>
+            <li>Easy-to-use interface for a smooth experience.</li>
+            <li>Supports a wide range of social media platforms.</li>
+        </ul>
+
+        <h2>How it works:</h2>
+        <p>Simply input the URL of the video or audio you want to download, and choose whether you want to download the video or audio file. The app will process the request and provide you with a download link to get your media content.</p>
+
+        <h2>Technologies used:</h2>
+        <ul>
+            <li>Flask for the backend web framework.</li>
+            <li>yt-dlp for video/audio extraction.</li>
+            <li>HTML, CSS for frontend development.</li>
+        </ul>
+    </div>
+</body>
+</html>
