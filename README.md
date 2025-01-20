@@ -71,8 +71,11 @@ MediaFromSocials/
 │   └── index.html        # Main HTML page
 ├── static/
 │   ├── styles.css        # CSS styles
+│   ├── index.js          # JS Script
+│   ├── logo.png          # Logo image
+│   ├── dunes.mp4         # Background video
 │   └── chips.webm        # Spinner animation
-└── downloads/            # Folder where downloaded media files are stored
+└── temp_downloads/       # Folder where downloaded media files are stored temporarily
 ```
 
 ## Dependencies
