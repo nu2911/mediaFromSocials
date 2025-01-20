@@ -72,7 +72,7 @@ MediaFromSocials/
 ├── static/
 │   ├── styles.css        # CSS styles
 │   └── chips.webm        # Spinner animation
-└── downloads/            # Folder where downloaded media files are stored
+└── temp_downloads/       # Folder where downloaded media files are stored temporarily
 ```
 
 ## Dependencies
