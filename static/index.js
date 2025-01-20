@@ -7,7 +7,6 @@ function hideSpinner() {
 window.onload = function () {
   hideSpinner();
 };
-
 function hideDownloadBtn() {
   document.getElementById("fbtns").style.display = "none";
 }
