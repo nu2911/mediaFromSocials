@@ -1,13 +1,14 @@
- function showSpinner() {
-            document.getElementById('spinner-container').style.display = 'block';
-        }
+function showSpinner() {
+  document.getElementById("spinner-container").style.display = "block";
+}
+function hideSpinner() {
+  document.getElementById("spinner-container").style.display = "none";
+}
+window.onload = function () {
+  hideSpinner();
+};
 
-        // Function to hide spinner when done
-        function hideSpinner() {
-            document.getElementById('spinner-container').style.display = 'none';
-        }
+function hideDownloadBtn() {
+  document.getElementById("fbtns").style.display = "none";
+}
 
-        // Hide the spinner on page load if no processing is needed
-        window.onload = function() {
-            hideSpinner();
-        }

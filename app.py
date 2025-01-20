@@ -3,7 +3,6 @@ import yt_dlp
 from flask import Flask, render_template, request, send_file
 from threading import Thread
 import time
-import datetime
 
 app = Flask(__name__)
 
@@ -116,7 +115,7 @@ def download(filename):
             file_path,
             as_attachment=True,
             download_name=filename,
-            mimetype='application/octet-stream',  # Use generic MIME type
+            mimetype='application/octet-stream', 
             conditional=True
         )
     else:

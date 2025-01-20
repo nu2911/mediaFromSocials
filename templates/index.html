@@ -4,12 +4,12 @@
 {% block content %}
         <div class="page">
             <h1 class="title prism"><img id="logo" src="{{ url_for('static', filename='image.png') }}" alt="">Media From Socials</h1>
-            <form method="POST" id="download-form" onsubmit="showSpinner()">
+            <form method="POST" id="download-form" onsubmit="showSpinner(); hideDownloadBtn();">
                 <div>
                     <label for="url" class="rob label">Enter Video URL:</label>
                     <input type="text" name="url" id="url" required>
                 </div>
-                <div>
+                <div id="fbtns">
                     <button type="submit" name="action" value="video" class="rob btn">Download Video</button>
                     <button type="submit" name="action" value="audio" class="rob btn">Download Audio</button>
                 </div>
@@ -29,7 +29,7 @@
             
             {% if file_url %}
                 <div class="result-message rob btn">
-                    <a href="{{ file_url }}">Start Downloading</a>
+                    <a href="{{ file_url }}" onsubmit="showSpinner()">Start Downloading</a>
                 </div>
             {% endif %}
         </div>
